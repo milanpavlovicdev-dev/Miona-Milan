@@ -34,26 +34,26 @@ function createMovieTracks() {
     overlay.className = 'tracks-overlay';
 
     const allImages = [
-        'M&M/slika1.jpg',
-        'M&M/slika2.jpg',
-        'M&M/slika3.jpg',
-        'M&M/slika4.jpg',
-        'M&M/slika5.jpg',
-        'M&M/slika6.jpg',
-        'M&M/slika7.jpg',
-        'M&M/slika8.jpg',
-        'M&M/slika9.jpg',
-        'M&M/slika10.jpg',
-        'M&M/slika11.jpg',
-        'M&M/slika12.jpg',
-        'M&M/slika13.jpg',
-        'M&M/slika14.jpg',
-        'M&M/slika15.jpg',
-        'M&M/slika16.jpg',
-        'M&M/slika17.jpg',
-        'M&M/slika18.jpg',
-        'M&M/slika19.jpg',
-        'M&M/slika20.jpg'
+        'M%26M/slika1.jpg',
+        'M%26M/slika2.jpg',
+        'M%26M/slika3.jpg',
+        'M%26M/slika4.jpg',
+        'M%26M/slika5.jpg',
+        'M%26M/slika6.jpg',
+        'M%26M/slika7.jpg',
+        'M%26M/slika8.jpg',
+        'M%26M/slika9.jpg',
+        'M%26M/slika10.jpg',
+        'M%26M/slika11.jpg',
+        'M%26M/slika12.jpg',
+        'M%26M/slika13.jpg',
+        'M%26M/slika14.jpg',
+        'M%26M/slika15.jpg',
+        'M%26M/slika16.jpg',
+        'M%26M/slika17.jpg',
+        'M%26M/slika18.jpg',
+        'M%26M/slika19.jpg',
+        'M%26M/slika20.jpg'
     ];
 
     const group1 = allImages.slice(0, 7);
