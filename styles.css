@@ -119,14 +119,19 @@ h1 {
     gap: 12px;
     align-items: center;
     will-change: transform;
+    visibility: hidden;
 }
 
 .track.ltr {
-    animation: slide-ltr 18s linear forwards !important;
+    transform: translateX(-100%);
+    animation: slide-ltr 18s linear both !important;
+    visibility: visible;
 }
 
 .track.rtl {
-    animation: slide-rtl 18s linear forwards !important;
+    transform: translateX(100%);
+    animation: slide-rtl 18s linear both !important;
+    visibility: visible;
 }
 
 .frame {
@@ -217,10 +222,12 @@ h1 {
     }
 
     .track.ltr {
+        transform: translateX(-100%);
         animation-duration: 14s !important;
     }
 
     .track.rtl {
+        transform: translateX(100%);
         animation-duration: 14s !important;
     }
 
