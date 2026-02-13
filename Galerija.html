@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naša Privatna Galerija</title>
+    <link rel="stylesheet" href="styles-galerija.css">
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-sidebar" id="navSidebar">
+        <ul>
+            <li><a href="Glavna.html">Home</a></li>
+            <li><a href="Galerija.html">Galerija</a></li>
+            <li><a href="Kviz.html">Kviz</a></li>
+            <li><a href="Pesme.html">Pesme & Pisma</a></li>
+            <li><a href="Putovanja.html">Putovanja</a></li>
+            <li><a href="LjubavnoPismo.html">Od Milana za Mionu</a></li>
+        </ul>
+    </nav>
+
+    <div class="password-lock" id="passwordLock">
+        <div class="lock-container">
+            <div class="lock-icon">🔒</div>
+            <h2>Privatna Galerija</h2>
+            <p>Ova galerija je zaštićena šifrom</p>
+            
+            <form class="password-form" id="passwordForm">
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    placeholder="Unesi šifru..." 
+                    autocomplete="off"
+                >
+                <button type="submit">Otključaj</button>
+            </form>
+            
+            <p id="errorMsg" class="error-msg"></p>
+        </div>
+    </div>
+
+    <div class="floating-zoom-controls" id="floatingZoom" style="display: none;">
+        <button id="floatZoomOut" class="float-zoom-btn">−</button>
+        <span id="floatZoomLevel" class="float-zoom-level">100%</span>
+        <button id="floatZoomIn" class="float-zoom-btn">+</button>
+    </div>
+
+    <div class="gallery-wrapper" id="galleryWrapper" style="display: none;">
+        <section class="gallery-hero">
+            <div class="hero-content">
+                <h1>Naša Privatna Galerija 💓</h1>
+                <p>Sa svim slikama samo nas dvoje!</p>
+            </div>
+        </section>
+
+        <section class="upload-section">
+            <div class="upload-container">
+                <h2>Dodaj nove slike</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <p>Klikni ovde ili prevuci slike</p>
+                    <input type="file" id="imageInput" multiple accept="image/*" style="display: none;">
+                </div>
+                <div id="uploadStatus" class="upload-status"></div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-grid-wrapper">
+                <div class="gallery-grid" id="photoGallery">
+                </div>
+            </div>
+        </section>
+
+        <div class="image-modal" id="imageModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-controls">
+                    <button class="modal-btn download-btn" id="downloadBtn">
+                        Preuzmi
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Milan & Miona. Our Private Moments. 💓</p>
+        </footer>
+    </div>
+
+    <script src="script-galerija.js"></script>
+</body>
+</html>

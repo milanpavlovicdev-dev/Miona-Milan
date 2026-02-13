@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan & Miona - Mini Kviz</title>
+    <link rel="stylesheet" href="styles-glavna.css">
+    <link rel="stylesheet" href="styles-quiz.css">
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-sidebar" id="navSidebar">
+        <ul>
+            <li><a href="Glavna.html">Home</a></li>
+            <li><a href="Galerija.html">Galerija</a></li>
+            <li><a href="Kviz.html">Kviz</a></li>
+            <li><a href="Pesme.html">Pesme & Pisma</a></li>
+            <li><a href="Putovanja.html">Putovanja</a></li>
+            <li><a href="LjubavnoPismo.html">Od Milana za Mionu</a></li>
+        </ul>
+    </nav>
+
+    <section class="quiz-section">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1>Mini Kviz</h1>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-text" id="progressText">Pitanje 1 od 100</p>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-section">
+                    <h2 id="questionText">Pitanje će biti ovde</h2>
+                    <div class="options-container">
+                        <button class="option-btn" data-option="0"></button>
+                        <button class="option-btn" data-option="1"></button>
+                        <button class="option-btn" data-option="2"></button>
+                        <button class="option-btn" data-option="3"></button>
+                    </div>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+
+                <div class="quiz-navigation">
+                    <button class="nav-btn prev-btn" id="prevBtn">← Unazad</button>
+                    <button class="nav-btn next-btn" id="nextBtn" disabled>Napred →</button>
+                </div>
+            </div>
+
+            <div class="quiz-complete" id="completeSection" style="display: none;">
+                <h2>Čestitam! 🎉</h2>
+                <p>Završila si kviz!</p>
+                <div class="final-score" id="finalScore"></div>
+                
+                <div class="question-selection">
+                    <h3>Odaberi pitanje da pokušaš ponovo:</h3>
+                    <div class="question-grid" id="questionGrid"></div>
+                </div>
+                
+                <button class="restart-btn" id="restartBtn">Počni Potpuno Ispočetka</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script-glavna.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

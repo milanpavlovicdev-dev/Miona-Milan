@@ -1,0 +1,806 @@
+.travel-hero {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a8a5c 0%, #2ec4b6 40%, #48bfe3 70%, #5390d9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.travel-hero::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.travel-hero::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 50%;
+    bottom: -80px;
+    left: -80px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero-plane {
+    position: absolute;
+    font-size: 2.5em;
+    animation: flyPlane 12s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes flyPlane {
+    0% { transform: translate(-100px, 150px) rotate(-15deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { transform: translate(1100px, -50px) rotate(-15deg); opacity: 0; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+}
+
+.travel-hero .hero-content {
+    text-align: center;
+    z-index: 10;
+    color: white;
+    position: relative;
+}
+
+.travel-hero .hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: slideInDown 0.8s ease;
+}
+
+.travel-hero .hero-content p {
+    font-size: 1.3em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    animation: slideInUp 0.8s ease 0.2s backwards;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.filter-section {
+    background: linear-gradient(to bottom, #f0faf7, white);
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    border: 2px solid #2ec4b6;
+    background: transparent;
+    color: #2ec4b6;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #2ec4b6;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(46, 196, 182, 0.3);
+}
+
+.map-section {
+    background: white;
+    padding: 40px 20px 50px;
+}
+
+.map-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: #1a8a5c;
+    margin-bottom: 25px;
+}
+
+.map-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.map-world {
+    background: #d4eaf7;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.map-world:active {
+    cursor: grabbing;
+}
+
+.map-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.map-ctrl-btn {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.map-ctrl-btn:hover {
+    background: #f0f0f0;
+    border-color: #2ec4b6;
+    color: #1a8a5c;
+}
+
+.map-world svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.map-loading {
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 1.3em;
+    color: #999;
+    animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.map-world svg path {
+    transition: opacity 0.3s ease;
+}
+
+.country-visited,
+.country-dream {
+    pointer-events: none;
+}
+
+.city-marker {
+    cursor: pointer;
+}
+
+.city-marker text {
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+}
+
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95em;
+    color: #555;
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.legend-color.visited-color {
+    background: #2ec4b6;
+}
+
+.legend-color.dream-color {
+    background: #c9a5f7;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #333;
+    display: inline-block;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px #333;
+}
+
+.travel-stats {
+    background: linear-gradient(135deg, #1a8a5c 0%, #2ec4b6 100%);
+    padding: 50px 20px;
+}
+
+.stats-row {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.travel-stat {
+    text-align: center;
+    color: white;
+    min-width: 150px;
+}
+
+.stat-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.stat-num {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.stat-txt {
+    font-size: 1em;
+    opacity: 0.9;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.places-section {
+    background: linear-gradient(to bottom, white, #f0faf7);
+    padding: 60px 20px 80px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #1a8a5c;
+    margin-bottom: 40px;
+}
+
+.places-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.place-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    animation: cardFadeIn 0.6s ease backwards;
+}
+
+.place-card:nth-child(1) { animation-delay: 0.1s; }
+.place-card:nth-child(2) { animation-delay: 0.2s; }
+.place-card:nth-child(3) { animation-delay: 0.3s; }
+.place-card:nth-child(4) { animation-delay: 0.4s; }
+.place-card:nth-child(5) { animation-delay: 0.5s; }
+.place-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.place-card.visited::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1a8a5c, #2ec4b6);
+}
+
+.place-card.dream::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #c44dff, #48bfe3);
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.place-card.hidden {
+    display: none;
+}
+
+.place-status {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.visited-badge {
+    background: #e8f8f5;
+    color: #1a8a5c;
+}
+
+.dream-badge {
+    background: #f3e8ff;
+    color: #9b59b6;
+}
+
+.place-emoji {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.place-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.place-date {
+    display: inline-block;
+    font-size: 0.85em;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.place-story {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.place-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.place-card.visited .tag:hover {
+    background: #e8f8f5;
+    color: #1a8a5c;
+}
+
+.place-card.dream .tag:hover {
+    background: #f3e8ff;
+    color: #9b59b6;
+}
+
+.bucket-section {
+    background: linear-gradient(135deg, #feca57 0%, #ff6b9d 100%);
+    padding: 60px 20px;
+}
+
+.bucket-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bucket-container h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+.bucket-list {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.bucket-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.bucket-item:last-child {
+    border-bottom: none;
+}
+
+.bucket-item:hover {
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.bucket-check {
+    font-size: 1.3em;
+    min-width: 30px;
+}
+
+.bucket-text {
+    font-size: 1.05em;
+    color: #555;
+}
+
+.bucket-item.done .bucket-text {
+    color: #1a8a5c;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .travel-hero {
+        height: 40vh;
+    }
+
+    .travel-hero::before {
+        width: 250px;
+        height: 250px;
+        top: -80px;
+        right: -60px;
+    }
+
+    .travel-hero::after {
+        width: 180px;
+        height: 180px;
+        bottom: -40px;
+        left: -40px;
+    }
+
+    .travel-hero .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .travel-hero .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-plane {
+        font-size: 1.8em;
+    }
+
+    .filter-section {
+        padding: 30px 15px 15px;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 10px 18px;
+        font-size: 0.85em;
+    }
+
+    .map-section {
+        padding: 30px 10px 40px;
+    }
+
+    .map-title {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+
+    .map-world {
+        padding: 3px;
+        min-height: 200px;
+        border-radius: 12px;
+    }
+
+    .map-controls {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .map-ctrl-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 1.1em;
+    }
+
+    .map-legend {
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .legend-item {
+        font-size: 0.8em;
+        gap: 5px;
+    }
+
+    .legend-color {
+        width: 16px;
+        height: 16px;
+    }
+
+    .travel-stats {
+        padding: 40px 15px;
+    }
+
+    .stats-row {
+        gap: 20px;
+    }
+
+    .travel-stat {
+        min-width: 100px;
+    }
+
+    .stat-icon {
+        font-size: 2em;
+    }
+
+    .stat-num {
+        font-size: 2em;
+    }
+
+    .stat-txt {
+        font-size: 0.8em;
+    }
+
+    .places-section {
+        padding: 40px 15px 60px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .places-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .place-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .place-emoji {
+        font-size: 2.5em;
+    }
+
+    .place-card h3 {
+        font-size: 1.3em;
+    }
+
+    .place-story {
+        font-size: 0.95em;
+    }
+
+    .bucket-section {
+        padding: 40px 15px;
+    }
+
+    .bucket-container h2 {
+        font-size: 1.6em;
+    }
+
+    .bucket-list {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .bucket-item {
+        padding: 12px 8px;
+        gap: 10px;
+    }
+
+    .bucket-text {
+        font-size: 0.95em;
+    }
+
+    .cities-toggle {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .city-item {
+        padding: 10px 12px;
+    }
+
+    .city-name {
+        font-size: 0.95em;
+    }
+
+    .city-story {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 400px) {
+    .travel-hero {
+        height: 35vh;
+    }
+
+    .travel-hero .hero-content h1 {
+        font-size: 1.6em;
+    }
+
+    .map-title {
+        font-size: 1.3em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .bucket-container h2 {
+        font-size: 1.4em;
+    }
+
+    .stat-num {
+        font-size: 1.7em;
+    }
+
+    .place-card {
+        padding: 20px 15px;
+    }
+}
+
+.cities-list {
+    margin: 18px 0;
+}
+
+.cities-toggle {
+    width: 100%;
+    padding: 10px 16px;
+    background: #f8f9fa;
+    border: 2px solid #e8e8e8;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.cities-toggle:hover {
+    background: #f0f0f0;
+    border-color: #ccc;
+}
+
+.cities-toggle .arrow {
+    font-size: 0.75em;
+    transition: transform 0.3s ease;
+}
+
+.cities-toggle.open .arrow {
+    transform: rotate(180deg);
+}
+
+.place-card.visited .cities-toggle:hover {
+    border-color: #2ec4b6;
+    color: #1a8a5c;
+}
+
+.place-card.dream .cities-toggle:hover {
+    border-color: #c44dff;
+    color: #9b59b6;
+}
+
+.cities-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.cities-content.open {
+    max-height: 600px;
+    padding-top: 12px;
+}
+
+.city-item {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: #fafafa;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.city-item:last-child {
+    margin-bottom: 0;
+}
+
+.city-item:hover {
+    background: #f5f5f5;
+}
+
+.place-card.visited .city-item {
+    border-left-color: #2ec4b6;
+}
+
+.place-card.dream .city-item {
+    border-left-color: #c44dff;
+}
+
+.city-name {
+    font-weight: 700;
+    font-size: 1em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.city-story {
+    font-size: 0.9em;
+    color: #888;
+    line-height: 1.6;
+    margin: 0;
+}

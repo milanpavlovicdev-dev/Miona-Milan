@@ -1,0 +1,607 @@
+.pesme-hero {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44dff 50%, #feca57 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.pesme-hero::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.pesme-hero::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+}
+
+.pesme-hero .hero-content {
+    text-align: center;
+    z-index: 10;
+    color: white;
+    position: relative;
+}
+
+.pesme-hero .hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: slideInDown 0.8s ease;
+}
+
+.pesme-hero .hero-content p {
+    font-size: 1.4em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    animation: slideInUp 0.8s ease 0.2s backwards;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.category-section {
+    background: linear-gradient(to bottom, #fff5f7, white);
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 12px 30px;
+    border: 2px solid #e91e63;
+    background: transparent;
+    color: #e91e63;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #e91e63;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(233, 30, 99, 0.3);
+}
+
+.poems-section {
+    background: linear-gradient(to bottom, white, #fff5f7);
+    padding: 40px 20px 80px;
+    min-height: 60vh;
+}
+
+.poems-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.poem-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 30px rgba(233, 30, 99, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    animation: cardFadeIn 0.6s ease backwards;
+}
+
+.poem-card:nth-child(1) { animation-delay: 0.1s; }
+.poem-card:nth-child(2) { animation-delay: 0.2s; }
+.poem-card:nth-child(3) { animation-delay: 0.3s; }
+.poem-card:nth-child(4) { animation-delay: 0.4s; }
+.poem-card:nth-child(5) { animation-delay: 0.5s; }
+.poem-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.poem-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b9d, #c44dff, #feca57);
+}
+
+.poem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(233, 30, 99, 0.2);
+}
+
+.poem-card.hidden {
+    display: none;
+}
+
+.poem-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.poem-card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.poem-date {
+    display: inline-block;
+    font-size: 0.85em;
+    color: #999;
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background: #f8f0f3;
+    border-radius: 20px;
+}
+
+.poem-preview p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.read-more-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #ff6b9d, #c44dff);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(196, 77, 255, 0.3);
+}
+
+.poem-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 5000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.poem-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: white;
+    border-radius: 25px;
+    padding: 50px 40px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.4s ease;
+}
+
+@keyframes modalSlideIn {
+    from { opacity: 0; transform: translateY(50px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #e91e63;
+    transform: scale(1.2);
+}
+
+.modal-icon {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.modal-date {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 30px;
+    padding: 4px 15px;
+}
+
+.modal-text {
+    text-align: center;
+}
+
+.modal-text p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.modal-text p:last-child {
+    margin-bottom: 0;
+}
+
+.poem-signature {
+    font-weight: bold;
+    color: #e91e63 !important;
+    font-style: italic;
+    margin-top: 30px !important;
+    font-size: 1.2em !important;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.poem-photos {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(233, 30, 99, 0.15);
+}
+
+.poem-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.poem-photo:hover {
+    transform: scale(1.05);
+}
+
+.poem-photo[src=""] {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    border: 2px dashed rgba(233, 30, 99, 0.3);
+    position: relative;
+}
+
+.poem-photo[src=""]::after {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85em;
+    color: rgba(233, 30, 99, 0.5);
+    text-align: center;
+}
+
+.modal-text .poem-photos {
+    margin-top: 35px;
+}
+
+.modal-text .poem-photo {
+    width: 180px;
+    height: 180px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.photo-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.photo-lightbox.active {
+    display: flex;
+}
+
+.photo-lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    animation: lightboxZoom 0.3s ease;
+}
+
+@keyframes lightboxZoom {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.2);
+}
+
+.lightbox-rotate {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    font-size: 2.5em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.lightbox-rotate:hover {
+    transform: rotate(90deg);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(233, 30, 99, 0.3);
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .pesme-hero {
+        height: 40vh;
+    }
+
+    .pesme-hero::before {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        right: -50px;
+    }
+
+    .pesme-hero::after {
+        width: 150px;
+        height: 150px;
+        bottom: -30px;
+        left: -30px;
+    }
+
+    .pesme-hero .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .pesme-hero .hero-content p {
+        font-size: 1em;
+    }
+
+    .category-section {
+        padding: 30px 15px 15px;
+    }
+
+    .category-buttons {
+        gap: 8px;
+    }
+
+    .category-btn {
+        padding: 10px 20px;
+        font-size: 0.85em;
+    }
+
+    .poems-section {
+        padding: 30px 15px 60px;
+    }
+
+    .poems-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .poem-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .poem-icon {
+        font-size: 2em;
+    }
+
+    .poem-card h3 {
+        font-size: 1.2em;
+    }
+
+    .read-more-btn {
+        padding: 8px 20px;
+        font-size: 0.85em;
+    }
+
+    .poem-modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        padding: 30px 18px;
+        border-radius: 18px;
+        max-height: 85vh;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 14px;
+        font-size: 1.8em;
+    }
+
+    .modal-icon {
+        font-size: 2.5em;
+    }
+
+    .modal-content h2 {
+        font-size: 1.4em;
+    }
+
+    .modal-text p {
+        font-size: 1em;
+        line-height: 1.7;
+    }
+
+    .poem-photos {
+        gap: 8px;
+        margin-top: 20px;
+        padding-top: 18px;
+    }
+
+    .poem-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .modal-text .poem-photos {
+        margin-top: 25px;
+    }
+
+    .modal-text .poem-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .photo-lightbox img {
+        max-width: 95vw;
+        max-height: 85vh;
+        border-radius: 8px;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+        font-size: 2.5em;
+    }
+
+    .lightbox-rotate {
+        top: 10px;
+        right: 60px;
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 400px) {
+    .pesme-hero {
+        height: 35vh;
+    }
+
+    .pesme-hero .hero-content h1 {
+        font-size: 1.7em;
+    }
+
+    .modal-content {
+        padding: 25px 14px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2em;
+    }
+
+    .poem-photo {
+        width: 85px;
+        height: 85px;
+    }
+
+    .modal-text .poem-photo {
+        width: 100px;
+        height: 100px;
+    }
+}

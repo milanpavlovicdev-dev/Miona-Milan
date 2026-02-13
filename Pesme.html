@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan & Miona - Pesme i Pisma</title>
+    <link rel="stylesheet" href="styles-glavna.css">
+    <link rel="stylesheet" href="styles-pesme.css">
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-sidebar" id="navSidebar">
+        <ul>
+            <li><a href="Glavna.html">Home</a></li>
+            <li><a href="Galerija.html">Galerija</a></li>
+            <li><a href="Kviz.html">Kviz</a></li>
+            <li><a href="Pesme.html">Pesme & Pisma</a></li>
+            <li><a href="Putovanja.html">Putovanja</a></li>
+            <li><a href="LjubavnoPismo.html">Od Milana za Mionu</a></li>
+        </ul>
+    </nav>
+
+    <section class="pesme-hero">
+        <div class="hero-content">
+            <h1>Pesme & Pisma</h1>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="all">Sve</button>
+            <button class="category-btn" data-category="pismo">Pisma</button>
+            <button class="category-btn" data-category="pesma">Pesme</button>
+        </div>
+    </section>
+
+    <section class="poems-section">
+        <div class="poems-container" id="poemsContainer">
+
+            <div class="poem-card" data-category="pesma">
+                <div class="poem-icon">🎵</div>
+                <h3>Pesma za prvu mesečnicu</h3>
+                <span class="poem-date">Mart 2024</span>
+                <div class="poem-preview">
+                    <p>Vidim te stalno, a stalno mi fališ...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>
+                        Vidim te stalno, a stalno mi fališ,<br>
+                        želim te zauvek moraš da shvatiš.<br>
+                        Obožavam te svim svojim srcem,<br>
+                        to ti najbolje kažem poljupcem.<br>
+                        Ljubav mog života, nikada te ne bih menjao,<br>
+                        svaki tren sa tobom uvek sam se smejao.<br>
+                        Inspiriše me tvoja lepota,<br>
+                        jednim pogledom srećan sam do kraja života.<br>
+                        Mislim na tebe dok iz sna se budim,<br>
+                        i kasno uveče kad krenem da spim.<br>
+                        Ti si u mojim mislima ceo dan,<br>
+                        zato sam i postao toliko radostan.<br>
+                        Evo još jednom ti zborim,<br>
+                        mnogo te volim.
+                    </p>
+                    <p>
+                        Volim tvoje usne nežne, meke i glatke,<br>
+                        poljubce ti volim isto, mnogo slatke.<br>
+                        Oči bistre, čiste, zeleno, plave,<br>
+                        obožavam kad me gledaju tako svetlucave.<br>
+                        Ljubim ti obraze hladne tvoje,<br>
+                        moram da ih ugrejem zbog toga postoje.<br>
+                        Imaš i prelep nosić mali,<br>
+                        sjajan dodatak tvojoj savršenoj glavi.<br>
+                        Mirišeš uvek divno kao prolećni cvet,<br>
+                        uvek sveže, čisto kao lalin buket.<br>
+                        Tvoj osmeh meni znači sve na ovom svetu,<br>
+                        čuvam ga kao da sutra videti ga neću.<br>
+                        Evo još jednom ti zborim,<br>
+                        mnogo te volim.
+                    </p>
+                    <p class="poem-signature">Tvoj Milan 💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/1mesec_prva_strana.jpg" alt="Slika 1" class="poem-photo" data-placeholder="📷 Slika 1">
+                        <img src="Pesme&Pisma/1mesec_druga_strana.jpg" alt="Slika 2" class="poem-photo" data-placeholder="📷 Slika 2">
+                        <img src="Pesme&Pisma/1mesec_treca_strana.jpg" alt="Slika 3" class="poem-photo" data-placeholder="📷 Slika 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>3 meseci pismo</h3>
+                <span class="poem-date">Maj 2024</span>
+                <div class="poem-preview">
+                    <p>Voleću te zauvek.</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>Voleću te zauvek.</p>
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/3meseci_pismo.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #1</h3>
+                <span class="poem-date">1.7.2024</span>
+                <div class="poem-preview">
+                    <p>Ljubavi fališ mi...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>1.7.2024
+
+                       Ljubavi fališ mi.
+
+                       eh eh eh kako ću ja bez tebe još toliko dugo. Ne znam iskreno da li je moguće preživeti toliko dugo bez moje ljubavi 
+                       najlepše. Mentalno ću pući ili dobiti neku bolest majke mi. Prvi dan na poslu. Jako je bilo loše morati ostaviti 
+                       telefon i nedopisivati se sa tobom jer mi je  to jedini spas ako si tako daleko. Ne znam kako ću. Mnogo sam glup što 
+                       nisam ranije uzeo da radim vikendom da bih skoro odmah došao kod tebe. Toliko mi nedostaju zagrljaji i poljubci i jako se
+                       osećam loše jer sam trebao čvršće da te zagrlim kad si odlazila. Osećam se kao da gledam tu zvezdu moju koja je 
+                       toliko daleko i sve želim je da osećam tvoj dodir i toplinu. Volim te najviše na svetu andjele moj najlepši i toliko 
+                       jedva čekam opet da te vidim da je neopisivo to. Vidimo se u Herceg Novom ljubavi. 💓</p>
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_1.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #2</h3>
+                <span class="poem-date">2.7.2024</span>
+                <div class="poem-preview">
+                    <p>Mnogo mi nedostaješ...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>2.7.2024
+
+                       Mnogo mi nedostaješ ljubavi moja divna. Stalno mi se plače kad ynam da nisi blizu mene. Toliko si daleko i toliko ću 
+                       dugo biti bez tebe da ne znam šta ću sam sa sobom, bez tebe. Mrzim to. Tebe volim najviše na svetu i samim tim kad 
+                       nisi tu da ti dam svoju ljubav srce se cepa. Ti zaslužuješ svu moju ljubav. Ispred mene nalazi se jos toliko dana 
+                       patnje i žalosti, ali moram to prevazići. Vidimo se u Herceg Novom ljubavi moja. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_2.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #3</h3>
+                <span class="poem-date">3.7.2024</span>
+                <div class="poem-preview">
+                    <p> Fališ mi mnogo...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>3.7.2024
+
+                       Fališ mi mnogo bebac. Neopisivo je teško biti odvojen od tebe. Jako želim da samo preskočim sve i dodjem do 
+                       dela gde smo ponovo zajedno. Volim te. Na poslu je jako teško i želim da mogu da posle toga dodjem kući gde me 
+                       ti čekaš i ponovo budem tvoj bebac. Suze samo liju jer nemam kome da dodjem u zagrljaj jako dugo. Trebaš mi. 
+                       Sve što mi pružaš tako je divno i iskreno. Mnogo te volim. Vidimo se u Herceg Novom ljubavi. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_3.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #4</h3>
+                <span class="poem-date">4.7.2024</span>
+                <div class="poem-preview">
+                    <p>Nedostaješ mi andjele...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>4.7.2024
+
+                       Nedostaješ mi andjele moj divni, jako bih voleo da tvoja mama da da dodjem 14. jula da ti dam pisma i da bude 
+                       sve tako simbolično, mislim da ćeš baš, baš, voleti ova pisma jer ti pišem kao da sam otišao u rat 1940. godine 
+                       pa moram da ti pišem ovako, ali volim to. Jedva čekam da te zaprosim ženo moja najdivnija, savršeni smo zajedno 
+                       i želim da planiram svoju budućnost jedino sa tobom. Vidimo se u Herceg Novom. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_4.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #5</h3>
+                <span class="poem-date">5.7.2024</span>
+                <div class="poem-preview">
+                    <p>I tako...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>5.7.2024
+
+                       I tako, bliži se kraj još jednom danu patnje i mučenja. Jako mi nedostaješ. Više mi ti fališ nego što bi Sunce 
+                       falilo Zemlji. Danas sam plakao za tobom ljubavi moja. jako sam usamljen i jako je teško posle toliko vremena 
+                       zajedno ne videti te. Jako se trudim na poslu dokazati se Bojanu i zaraditi pare za poklon. Mislim da će te taj 
+                       poklon učiniti najsrećnijom odmah posle mog dolaska. Slušam pesme na poslu koje me podsećaju na tebe. Volim da ih 
+                       pevušim, a najdraža mi je "love me like there's no tomorrow". Krenuo sam da treniram boks i udarce na onom džaku 
+                       kako bih te mogao braniti. Svaki dan kad te vidim preko slike ili poziva patim što nisam kraj tebe. Trudim se da 
+                       izgradim savršeno telo za samo tvoje oči. Kad sam već kod tvojih očiju nedostaje mi da se zagledam u njih na dugo 
+                       baš. Mnogo se nadam da ću doći 14. bilo bi baš dobro da te vidim. KAO BAŠ DOBRO. Ne verujem da bih izdržao mesec 
+                       dana. Volim te najviše na svetu andjele moj divni. Tačno znam kakav kez ćeš imati dok čitaš ovo. Još samo 8 dana 
+                       do mog polaska. Vidimo se u Herceg Novom ljubavi. hi hi hi 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_5.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #6</h3>
+                <span class="poem-date">6.7.2024</span>
+                <div class="poem-preview">
+                    <p>Baš mi nedostaješ...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>6.7.2024
+
+                       Baš mi nedostaješ andjele moj lepi, bliži se kraj još jednom danu, ali zato, ja sam za 8 dana tu kod tebe u tvojim 
+                       rukama zagrljen, zauvke na sigurnom, mnogo te volim. Hvala bogu na kraju se sve sredilo i uspeo sam da dodjem 
+                       toliko rano jer ja znam da ne bih izdržao bez tebe. Svaki dan deo mene nedostaje, deo mene koji me čini 
+                       najsrećnijim čovekom na ovoj planeti i u celom univerzumu, i ja ne mogu bez njega. Vidimo se u  Herceg Novom ljubavi. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_6.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #7</h3>
+                <span class="poem-date">7.7.2024</span>
+                <div class="poem-preview">
+                    <p>Danas je bio...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>7.7.2024
+
+                       Danas je bio najteži dan do sada to je sigurno, srce me nabadalo, povraćalo mi se i gadio sam se sam sebi, ne znam 
+                       šta bi se desilo da mi tad nisi odgovorila. Praznina koja je u meni se širi iz dana u dan i čeka da budem opet ceo 
+                       ja, većinu dana proveo sam u krevetu misleći o svemu za šta sam ti zahvalan. Nisi svesna koliko te volim. 
+                       Ljubavi moja najlepša, ti si jedina osoba na ovoj planeti koja me čini srećnim. Još samo 7 dana ljubavi. Vidimo 
+                       se u Herceg Novom. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_7.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #8</h3>
+                <span class="poem-date">8.7.2024</span>
+                <div class="poem-preview">
+                    <p>Mnogo mi nedostaješ...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>8.7.2024
+
+                       Mnogo mi nedostaješ ženo moja, danas mi je bilo mnogo drago što smo pričali ceo dan jer mi je baš trebalo i bilo 
+                       mi je baš, baš divno pričati sa tobom kao i uvek. Mnogo volim da pričam sa tobom o svemu. Volim i da slušam tvoj 
+                       prelepi glasić, kao i da sedim sa tobom u tišini ali samo kad smo jedan pored drugog, ponekad je i to opuštajuće 
+                       jer znamo da se volimo i samo uživamo sigurni jedan uz drugog. 
+                       Vidimo se u Herceg Novom za 5 dana ljubavi moja savršena 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_8.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #9</h3>
+                <span class="poem-date">9.7.2024</span>
+                <div class="poem-preview">
+                    <p>Mnogo mi fališ...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>9.7.2024
+
+                       Mnogo mi fališ bebo, sada je moj tata upravo poruku da zakaže prevoz do tebe, Jedva čekam da ti dodjem ljubavi. 
+                       toliko mi je lepo kad zamislim koliko ćemo se zabaviti tamo. Kupaćemo se u moru ujutru i kasno u noći, ješćemo 
+                       ukusnu hranu, pričati, gledati se , ljubiti i uživati zajedno. Samo čekam da ti opet vidim tvoju andjeosku lepotu, 
+                       da ti osetim tvoje brižne ruke i toplo telo uživo. Vidimo se u Herceg Novom za 4 dana princezo moja. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_9.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #10</h3>
+                <span class="poem-date">10.7.2024</span>
+                <div class="poem-preview">
+                    <p>Ljubavi moja...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>10.7.2024
+
+
+                       Ljubavi moja, za 3 dana sam u tvojim rukama, toliko sam uzbudjen i srećan, ali je i dalje teško, živeti bez tebe. 
+                       "Volim te svim svojim srcem, to ti najbolje kažem poljubcem.", želim da osetiš moju ljubav prema tebi još više. 
+                       Jedva šekam da ponovo mogu da brinme o tebi, da te mazim i pazim i ljubim svuda po telu. Prvo letovanje zajedno
+                       sigurno ćemo zapamtiti zauvek. Želim da napravimo uspomena dovoljno da pričamo o njima ceo ostatak naših života. 
+                       Vidimo se u Herceg Novom za 3 dana andjele moj. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_10.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #11</h3>
+                <span class="poem-date">11.7.2024</span>
+                <div class="poem-preview">
+                    <p>Ženo moja još...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>11.7.2024
+
+
+                       Ženo moja još malo pa ti dolazim. Danas sam otpušten sa posla ali hvala bogu više vremena imam da pričam sa tobom, 
+                       to mi je mnogo lepše. Za 2 dana krećem, mnogo sam uzbudjen. Baš će mi biti lakše kad možemo da uživamo i totalno 
+                       da se opustimo. Prvi put ćemo okusiti život zajedno u stanu na duže vreme i sreću koja sa time dolazi. Dobar dan 
+                       i dobro jutro više neće biti u porukama nego uživo, spavanje će biti lakše sa znanjem da spavam sa najvoljenijom 
+                       osobom. Vidimo se u Herceg Novom andjele moj najlepši. 💓 </p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_11.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #12</h3>
+                <span class="poem-date">12.7.2024</span>
+                <div class="poem-preview">
+                    <p>Ljubavi moja...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>12.7.2024
+
+                       Ljubavi moja, volim te, još malo pa sam ti stigao, mnogo sam zahvalan za to što si mi rekla preko poruke, jako mi 
+                       znači kad to čujem od tebe. Volim te. Mnogo mi fališ, ne mogu ti opisati koliko mi je danas značilo to kako smo 
+                       proveli dan. Ali još više jedva čekam da dodjem i da nam svaki dan bude 1000 puta bolji. Mnogo te volim. 
+                       Zamišljam kako ću plakati kad te opet zagrlim. Vidimo se u Herceg Novom andjele moj najlepši. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_12.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #13</h3>
+                <span class="poem-date">13.7.2024</span>
+                <div class="poem-preview">
+                    <p>Danas je dan...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>13.7.2024
+
+                       Danas je dan polaska. Ceo dan ne mogu da sedim mirno i skinem osmeh sa lica jer znam da sam uskoro sa tobom. 
+                       Jošuvek mi mnogo nedostaješ ljubavi. Mnogo te volim. Jedva pišem ovo od uzbudjenja. Sve je spakovano i sredjeno 
+                       samo ostaje dolazak. Sutra nam je isplaniran dan i zato što znam da sam za manje od 20 sati tu nemam mira uopšte. 
+                       Volim te najviše na svetu, ti si meni sve na ovom svetu. Vidimo se sutra u Herceg Novom andjele moj najsavršeniji. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_13.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem-card" data-category="pismo">
+                <div class="poem-icon">💌</div>
+                <h3>5 meseci pismo #14</h3>
+                <span class="poem-date">14.7.2024</span>
+                <div class="poem-preview">
+                    <p>Ljubavi moja...</p>
+                </div>
+                <button class="read-more-btn" onclick="openPoem(this)">Čitaj više</button>
+                <div class="poem-full" style="display:none;">
+                    <p>14.7.2024
+
+                       Ljubavi moja, nedostaješ mi još, poslednji sati koji će proći bez vidjanja tebe prolaze. Još tako malo mi fali do 
+                       tebe, mnogo sam uzbudjen. Ne mogu da spavam od uzbudjenja. Pišem ti ovo dok spavaš. Razmišljam kakav če nam biti 
+                       zagrljaj. Mnogo te volim. Danas uveče možemo da spavamo zajendo, krišom, da tvoja baka nas ne vidi. Mnogo daleko 
+                       smo došli za 5 meseci. Svi trenuci koji su doveli do ovog trenutka obožavao sam da provodim sa tobom. Ne mogu ti 
+                       opisati koliko želim da te poljubim. Drago mi je što smo od trenutka kad sam ti rekao da te volim do sada uspeli 
+                       da organizujemo ovo putovanje koje ćemo zauvek pamtiti. Ti si meni sve na svetu. Vidimo se u Herceg Novom danas 
+                       andjele moj divni. 💓</p>
+
+                    <p class="poem-signature">💓</p>
+                    <div class="poem-photos">
+                        <img src="Pesme&Pisma/5meseci_14.jpg" alt="Slika" class="poem-photo" data-placeholder="📷 Slika">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="poem-modal" id="poemModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-icon" id="modalIcon"></div>
+            <h2 id="modalTitle"></h2>
+            <span class="modal-date" id="modalDate"></span>
+            <div class="modal-text" id="modalText"></div>
+        </div>
+    </div>
+
+    <div class="photo-lightbox" id="photoLightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-rotate" id="lightboxRotate">&#x21BB;</button>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Milan & Miona. Forever together. 💓</p>
+    </footer>
+
+    <script src="script-pesme.js"></script>
+</body>
+</html>

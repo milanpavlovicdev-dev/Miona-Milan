@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan & Miona - Naša Putovanja</title>
+    <link rel="stylesheet" href="styles-glavna.css">
+    <link rel="stylesheet" href="styles-putovanja.css">
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-sidebar" id="navSidebar">
+        <ul>
+            <li><a href="Glavna.html">Home</a></li>
+            <li><a href="Galerija.html">Galerija</a></li>
+            <li><a href="Kviz.html">Kviz</a></li>
+            <li><a href="Pesme.html">Pesme & Pisma</a></li>
+            <li><a href="Putovanja.html">Putovanja</a></li>
+            <li><a href="LjubavnoPismo.html">Od Milana za Mionu</a></li>
+        </ul>
+    </nav>
+
+    <section class="travel-hero">
+        <div class="hero-content">
+            <h1>🗺️ Naša Putovanja</h1>
+            <p>Mesta koja smo posetili i ona o kojima sanjamo</p>
+        </div>
+        <div class="hero-plane">✈️</div>
+    </section>
+
+    <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Sva mesta</button>
+            <button class="filter-btn" data-filter="visited">✅ Posetili smo</button>
+            <button class="filter-btn" data-filter="dream">💭 Sanjamo o...</button>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-container">
+            <h2 class="map-title">🗺️ Naša Mapa Sveta</h2>
+            <div class="map-world" id="mapContainer">
+                <div class="map-loading">🌍 Učitavanje mape...</div>
+            </div>
+            <div class="map-controls">
+                <button class="map-ctrl-btn" id="zoomIn" title="Zumiraj">+</button>
+                <button class="map-ctrl-btn" id="zoomOut" title="Umanji">−</button>
+                <button class="map-ctrl-btn" id="zoomReset" title="Reset">↺</button>
+            </div>
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-color visited-color"></span>
+                    <span>Posetili smo</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color dream-color"></span>
+                    <span>Sanjamo o...</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot"></span>
+                    <span>Grad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="travel-stats">
+        <div class="stats-row">
+            <div class="travel-stat">
+                <div class="stat-icon">🌍</div>
+                <div class="stat-num" id="countriesVisited">2</div>
+                <div class="stat-txt">Zemlje posetili</div>
+            </div>
+            <div class="travel-stat">
+                <div class="stat-icon">💭</div>
+                <div class="stat-num" id="countriesDream">4</div>
+                <div class="stat-txt">Zemlje sanjamo</div>
+            </div>
+            <div class="travel-stat">
+                <div class="stat-icon">📸</div>
+                <div class="stat-num">∞</div>
+                <div class="stat-txt">Uspomena</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places-section">
+        <h2 class="section-title">Naša mesta</h2>
+        <div class="places-container" id="placesContainer">
+        </div>
+    </section>
+
+    <section class="bucket-section">
+        <div class="bucket-container">
+            <h2>🎯 Naša Travel Bucket Lista</h2>
+            <div class="bucket-list">
+                <div class="bucket-item done">
+                    <span class="bucket-check">✅</span>
+                    <span class="bucket-text">Prvo letovanje zajedno</span>
+                </div>
+                <div class="bucket-item done">
+                    <span class="bucket-check">✅</span>
+                    <span class="bucket-text">Obići Bokokotorski zaliv</span>
+                </div>
+                <div class="bucket-item done">
+                    <span class="bucket-check">✅</span>
+                    <span class="bucket-text">Posetiti Budimpeštu</span>
+                </div>
+                <div class="bucket-item done">
+                    <span class="bucket-check">✅</span>
+                    <span class="bucket-text">Otići u primark</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Gledati zalazak sunca na Santoriniju</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Videti severnu svetlost u Norveškoj</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Šetnja ispod sakura drveća u Japanu</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Selfie ispred Ajfelove kule</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Videti piramide u Egiptu</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Bungalov nad vodom na Maldivima</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Road trip po Evropi</span>
+                </div>
+                <div class="bucket-item">
+                    <span class="bucket-check">⬜</span>
+                    <span class="bucket-text">Posetiti sve zemlje sa naše liste</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Milan & Miona. Forever together. 💓</p>
+    </footer>
+
+    <script src="map-data.js"></script>
+    <script src="script-putovanja.js"></script>
+</body>
+</html>
