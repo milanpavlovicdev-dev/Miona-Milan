@@ -1043,6 +1043,9 @@ function openImageModal(imageSrc) {
 const modalDeleteBtn = document.getElementById('modalDeleteBtn');
 modalDeleteBtn.addEventListener('click', function() {
     if (!currentModalPhoto) return;
+    
+    if (!confirm('Da li si siguran/na da želiš da ukloniš ovu sliku iz galerije zauvek?')) return;
+    
     const galleryItem = document.querySelector(`.gallery-item[data-photo="${currentModalPhoto}"]`);
     
     const savedPhotos = cacheSys.getPhotosData();
