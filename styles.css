@@ -9,8 +9,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    height: 100dvh;
     background: linear-gradient(135deg, #ff6b9d 0%, #feca57 100%);
     font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -55,6 +58,11 @@ h1 {
     transform: scale(1.05);
 }
 
+.yes-btn:active {
+    background-color: #ff4081;
+    transform: scale(0.97);
+}
+
 .no-btn {
     background-color: #ff6b9d;
     color: white;
@@ -63,6 +71,11 @@ h1 {
 .no-btn:hover {
     background-color: #ff4081;
     transform: scale(1.05);
+}
+
+.no-btn:active {
+    background-color: #ff4081;
+    transform: scale(0.97);
 }
 @keyframes fall {
     0% {
@@ -165,11 +178,13 @@ h1 {
         padding: 40px 20px;
         margin: 15px;
         border-radius: 15px;
+        max-width: calc(100vw - 30px);
     }
 
     h1 {
         font-size: 1.6em;
         margin-bottom: 30px;
+        word-break: break-word;
     }
 
     .buttons {
@@ -181,15 +196,36 @@ h1 {
         padding: 14px 40px;
         font-size: 1.1em;
         width: 100%;
+        touch-action: manipulation;
     }
 
     .frame {
-        width: 200px;
-        height: 150px;
+        width: 180px;
+        height: 130px;
+        border-width: 3px;
     }
 
     .tracks-overlay {
-        gap: 12px;
+        gap: 10px;
+        top: 10%;
+        height: 80%;
+    }
+
+    .track {
+        width: 300%;
+        gap: 8px;
+    }
+
+    .track.ltr {
+        animation-duration: 14s !important;
+    }
+
+    .track.rtl {
+        animation-duration: 14s !important;
+    }
+
+    .heart {
+        animation-duration: 4s;
     }
 }
 
@@ -208,7 +244,32 @@ h1 {
     }
 
     .frame {
-        width: 160px;
-        height: 120px;
+        width: 140px;
+        height: 100px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .frame {
+        width: 150px;
+        height: 100px;
+    }
+
+    .tracks-overlay {
+        top: 5%;
+        height: 90%;
     }
 }

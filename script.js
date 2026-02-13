@@ -4,7 +4,9 @@ const yesBtn = document.querySelector('.yes-btn');
 
 function createFallingHearts() {
     let heartCount = 0;
-    const maxHearts = 150;
+    const isMobile = window.innerWidth <= 768;
+    const maxHearts = isMobile ? 60 : 150;
+    const interval = isMobile ? 120 : 80;
     
     const heartInterval = setInterval(() => {
         const heart = document.createElement('div');
@@ -16,13 +18,13 @@ function createFallingHearts() {
         
         setTimeout(() => {
             heart.remove();
-        }, 12000);
+        }, isMobile ? 6000 : 12000);
         
         heartCount++;
         if (heartCount >= maxHearts) {
             clearInterval(heartInterval);
         }
-    }, 80); 
+    }, interval); 
 }
 
 function createMovieTracks() {
@@ -61,6 +63,8 @@ function createMovieTracks() {
 
     const tracks = 3;
     let finished = 0;
+    const isMobile = window.innerWidth <= 768;
+    const framesPerTrack = isMobile ? 8 : 12;
 
     for (let t = 0; t < tracks; t++) {
         const track = document.createElement('div');
@@ -68,7 +72,7 @@ function createMovieTracks() {
         
         const currentImages = imageGroups[t];
 
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < framesPerTrack; i++) {
             const frame = document.createElement('div');
             frame.className = 'frame';
 
