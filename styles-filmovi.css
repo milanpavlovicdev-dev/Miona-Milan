@@ -198,10 +198,10 @@
 }
 
 .filmovi-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 25px;
 }
 
@@ -209,12 +209,13 @@
 .film-card {
     background: linear-gradient(145deg, #1e2a4a, #1a2340);
     border-radius: 18px;
-    padding: 30px 25px;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
     border: 1px solid rgba(255,255,255,0.06);
     animation: cardFadeIn 0.5s ease backwards;
+    display: flex;
+    flex-direction: column;
 }
 
 .film-card::before {
@@ -226,6 +227,7 @@
     height: 3px;
     background: linear-gradient(90deg, #ff6b9d, #c44dff, #feca57);
     opacity: 0.8;
+    z-index: 2;
 }
 
 .film-card:hover {
@@ -243,7 +245,32 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.card-type {
+/* ========== POSTER ========== */
+.card-poster {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+}
+
+.card-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.film-card:hover .card-poster img {
+    transform: scale(1.05);
+}
+
+.card-poster .card-type {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
     display: inline-block;
     padding: 4px 14px;
     border-radius: 20px;
@@ -251,52 +278,49 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    backdrop-filter: blur(8px);
 }
 
 .card-type.film {
-    background: rgba(254, 202, 87, 0.15);
+    background: rgba(254, 202, 87, 0.25);
     color: #feca57;
-    border: 1px solid rgba(254, 202, 87, 0.3);
+    border: 1px solid rgba(254, 202, 87, 0.4);
 }
 
 .card-type.serija {
-    background: rgba(108, 92, 231, 0.15);
+    background: rgba(108, 92, 231, 0.25);
     color: #a29bfe;
-    border: 1px solid rgba(108, 92, 231, 0.3);
+    border: 1px solid rgba(108, 92, 231, 0.4);
 }
 
-.card-emoji {
-    font-size: 2.8em;
-    margin-bottom: 12px;
-    display: block;
+/* ========== CARD BODY ========== */
+.card-body {
+    padding: 18px 20px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
-    font-size: 1.25em;
+    font-size: 1.15em;
     color: #fff;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .card-genre {
-    font-size: 0.85em;
+    font-size: 0.82em;
     color: rgba(255,255,255,0.4);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-style: italic;
 }
 
 .card-comment {
-    font-size: 0.9em;
+    font-size: 0.88em;
     color: rgba(255,255,255,0.6);
     line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.card-rating {
-    font-size: 1.1em;
-    letter-spacing: 2px;
+    margin-top: auto;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -331,8 +355,8 @@
     }
 
     .filmovi-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .film-reel {

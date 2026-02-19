@@ -20,132 +20,116 @@ const WATCH_LIST = [
     {
         title: '500 Days of Summer',
         type: 'film',
-        emoji: '🌻',
+        poster: 'https://image.tmdb.org/t/p/w500/qXAuQ9hF30sQRsXf40OfRVl0MJZ.jpg',
         genre: 'Romansa / Drama',
-        comment: 'Nije ljubavna priča — ali jeste naša vrsta filma.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Deadpool & Wolverine',
         type: 'film',
-        emoji: '⚔️',
+        poster: 'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg',
         genre: 'Akcija / Komedija',
-        comment: 'Najluđi duo — smeh od početka do kraja.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Deadpool',
         type: 'film',
-        emoji: '💀',
+        poster: 'https://image.tmdb.org/t/p/w500/3E53WEZJqP6aM84D8CckXx4pIHw.jpg',
         genre: 'Akcija / Komedija',
-        comment: 'Gde je sve počelo — neuništivi antihero.',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Deadpool 2',
         type: 'film',
-        emoji: '💣',
+        poster: 'https://image.tmdb.org/t/p/w500/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg',
         genre: 'Akcija / Komedija',
-        comment: 'Još luđi nastavak sa još više smeha.',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'The Notebook',
         type: 'film',
-        emoji: '💌',
+        poster: 'https://image.tmdb.org/t/p/w500/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg',
         genre: 'Romansa / Drama',
-        comment: 'Klasik nad klasicima. Suze garantovane.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Titanic',
         type: 'film',
-        emoji: '🚢',
+        poster: 'https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg',
         genre: 'Romansa / Drama',
-        comment: 'Jack i Rose — večna ljubavna priča na moru.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Free Guy',
         type: 'film',
-        emoji: '🎮',
+        poster: 'https://image.tmdb.org/t/p/w500/dxraF0qPr1OEgJk17ltQTO84kQF.jpg',
         genre: 'Komedija / Akcija',
-        comment: 'Kad NPC postane heroj — genijalno i zabavno!',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'The Proposal',
         type: 'film',
-        emoji: '💍',
+        poster: 'https://image.tmdb.org/t/p/w500/6stnAm1wSek8ZrislwK4xGTyCnt.jpg',
         genre: 'Romansa / Komedija',
-        comment: 'Sandra i Ryan = savršena kombinacija.',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Green Lantern',
         type: 'film',
-        emoji: '💚',
+        poster: 'https://image.tmdb.org/t/p/w500/fj21HwUprqjjwTdkKC1XZurRSpV.jpg',
         genre: 'Akcija / Fantazija',
-        comment: 'Ryan Reynolds u zelenom — klasika.',
-        rating: '⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Just Friends',
         type: 'film',
-        emoji: '😂',
+        poster: 'https://image.tmdb.org/t/p/w500/lh2EUTVOcESkdEOcsjYEW6qS1U0.jpg',
         genre: 'Romansa / Komedija',
-        comment: 'Kad se prijateljstvo pretvori u nešto više.',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'The Addams Family',
         type: 'film',
-        emoji: '🖤',
+        poster: 'https://image.tmdb.org/t/p/w500/qFf8anju5f2epI0my8RdwwIXFIP.jpg',
         genre: 'Komedija / Horor',
-        comment: 'Najčudnija ali najsimpatičnija porodica.',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
 
     /* ===== SERIJE ===== */
     {
         title: 'The Summer I Turned Pretty',
         type: 'serija',
-        emoji: '🌊',
+        poster: 'https://image.tmdb.org/t/p/w500/xBIz53wYWsKfFpN0TaizVAjKJ0z.jpg',
         genre: 'Romansa / Drama',
-        comment: 'Leto, ljubav i teške odluke. Prelepa serija.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Life with the Walter Boys',
         type: 'serija',
-        emoji: '🏡',
+        poster: 'https://image.tmdb.org/t/p/w500/jg3YdxDNlxay0NWTxgAPif647Hj.jpg',
         genre: 'Romansa / Drama',
-        comment: 'Nova kuća, novi život, novi momci — haos!',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Stranger Things',
         type: 'serija',
-        emoji: '👾',
+        poster: 'https://image.tmdb.org/t/p/w500/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg',
         genre: 'Sci-Fi / Horor',
-        comment: 'Upside Down i ekipa — neizostavna serija.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'Alice in Borderland',
         type: 'serija',
-        emoji: '🃏',
+        poster: 'https://image.tmdb.org/t/p/w500/Ac8ruycRXzgcsndTZFK6ouGA0FA.jpg',
         genre: 'Triler / Sci-Fi',
-        comment: 'Igre na život i smrt — napetost do poslednjeg trenutka.',
-        rating: '⭐⭐⭐⭐⭐'
+        comment: '...'
     },
     {
         title: 'XO, Kitty',
         type: 'serija',
-        emoji: '💋',
+        poster: 'https://image.tmdb.org/t/p/w500/hxvTdKAwv27PUfpXOQp6AwWr6V.jpg',
         genre: 'Romansa / Komedija',
-        comment: 'Kitty u Koreji — slatko, zabavno i romantično.',
-        rating: '⭐⭐⭐⭐'
+        comment: '...'
     }
 ];
 
@@ -165,12 +149,15 @@ function buildCards() {
         const typeLabel = item.type === 'film' ? '🎥 Film' : '📺 Serija';
 
         card.innerHTML = `
-            <span class="card-type ${item.type}">${typeLabel}</span>
-            <span class="card-emoji">${item.emoji}</span>
-            <div class="card-title">${item.title}</div>
-            <div class="card-genre">${item.genre}</div>
-            <div class="card-comment">${item.comment}</div>
-            <div class="card-rating">${item.rating}</div>
+            <div class="card-poster">
+                <img src="${item.poster}" alt="${item.title}" loading="lazy">
+                <span class="card-type ${item.type}">${typeLabel}</span>
+            </div>
+            <div class="card-body">
+                <div class="card-title">${item.title}</div>
+                <div class="card-genre">${item.genre}</div>
+                <div class="card-comment">${item.comment}</div>
+            </div>
         `;
 
         container.appendChild(card);
