@@ -81,8 +81,8 @@ const PLACES = [
         emoji: '🇬🇷',
         type: 'visited',
         date: 'Leto 2024',
-        story: 'Sunce, more i mi dvoje. Grčka je bila predivna u maju — obilasci gradova, prelepi zalasci sunca i trenuci koji će zauvek ostati u našim srcima.',
-        tags: ['🏖️ Plaža', '🌅 Zalasci', '🍦 Sladoled'],
+        story: 'Sunce, more i nas dvoje. Grčka je bila predivna u maju — obilasci gradova, prelepi zalasci sunca i trenuci koji će zauvek ostati u našim srcima.',
+        tags: ['🏖️ Plaža', '🌅 Zalasci', '🍽 Hrana'],
         svgClass: '.Greece',
         cities: [
             { name: 'Solun', x: 1105.66, y: 240.19, anchor: 'end', story: 'Bela kula, obala i prelepa atmosfera.' },
@@ -130,7 +130,7 @@ const PLACES = [
         emoji: '🇸🇰',
         type: 'visited',
         date: 'Putovanje',
-        story: 'Bratislava — grad na Dunavu sa prekrasnim starim centrom i pogledom na zamak. Kratko ali slatko putovanje!',
+        story: 'Bratislava — grad na Dunavu sa prekrasnim starim centrom. Kratko ali slatko putovanje sa eksurzijom!',
         tags: ['🕵️‍♂️ Mafija', '⛲ Fontana', '🏢 Tržni centri'],
         svgClass: '#SK',
         cities: [
@@ -173,7 +173,7 @@ const PLACES = [
         tags: ['🏔️ Zaliv', '🌊 More', '🏰 Stari grad'],
         svgClass: '#ME',
         cities: [
-            { name: 'Herceg Novi', x: 1082, y: 229, anchor: 'end', story: 'Druženje, palme i pogled na zaliv.' },
+            { name: 'Herceg Novi', x: 1082, y: 229, anchor: 'end', story: 'Nezaboravna letovanja, najdivnija sećanja, mnogo kupanja, sunčanja kao i druženja.' },
             { name: 'Kotor', x: 1083, y: 229, story: 'Stari grad i prelepe zidine.' },
             { name: 'Dobrota', x: 1083, y: 229, story: 'Mirno mestašce pored Kotora sa pogledom na zaliv. Lepo kupanje.' }
         ]
@@ -496,7 +496,7 @@ const PLACES = [
         emoji: '🇷🇴',
         type: 'visited',
         date: 'Putovanje',
-        story: 'Temišvar — prelepi grad sa austrijskom arhitekturom i šarmantnim trgovima. Kratko ali lepo putovanje preko granice!',
+        story: 'Temišvar — mali gradić, veliki tržni centar i Burger King. Prvo samostalno putovanje.',
         tags: ['🏛️ Arhitektura', '🏙️ Gradovi', '🇷🇴 Susedi'],
         svgClass: '#RO',
         cities: [
