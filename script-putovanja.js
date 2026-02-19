@@ -494,14 +494,13 @@ const PLACES = [
         id: 'rumunija',
         name: 'Rumunija',
         emoji: '🇷🇴',
-        type: 'dream',
-        date: 'Jednog dana...',
-        story: '...',
-        tags: ['...'],
+        type: 'visited',
+        date: 'Putovanje',
+        story: 'Temišvar — prelepi grad sa austrijskom arhitekturom i šarmantnim trgovima. Kratko ali lepo putovanje preko granice!',
+        tags: ['🏛️ Arhitektura', '🏙️ Gradovi', '🇷🇴 Susedi'],
         svgClass: '#RO',
         cities: [
-            { name: 'Temišvar', x: 1094, y: 208, story: '...' },
-            { name: 'Transilvanija', x: 1116, y: 208, story: '...' }
+            { name: 'Temišvar', x: 1094, y: 208, story: 'Lep grad sa predivnim centrom i trgovima.' }
         ]
     }
 ];

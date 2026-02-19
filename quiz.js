@@ -32,12 +32,12 @@ const originalQuizData = [
     },
     {
         question: "Koji je prvi film koji smo gledali kod kuće?",
-        options: ["The Notebook", "Titanic", "La La Land", "Minions"],
-        correct: 0
+        options: ["The Notebook", "500 days of Summer", "La La Land", "Minions"],
+        correct: 1
     },
     {
         question: "Koja nam je omiljena serija?",
-        options: ["XO kitty", "Alice in borderland", "Stranger Things", "To all the boys i loved before"],
+        options: ["XO kitty", "Alice in borderland", "Stranger Things", "The summer i turned pretty"],
         correct: [0,1,2,3]
     },
     {
@@ -82,8 +82,8 @@ const originalQuizData = [
     },
     {
         question: "Koji nam je prvi zajednički koncert na koji smo išli?",
-        options: ["Buč kesedi", "Tap 011", "Vlado Georgijev", "Bajaga"],
-        correct: 2
+        options: ["Buč kesedi", "Tap 011", "Vlado Georgijev", "Galija"],
+        correct: 3
     },
     {
         question: "Koja nam je omiljena igrica?",
